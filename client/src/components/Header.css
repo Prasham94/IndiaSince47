@@ -1,0 +1,42 @@
+.header {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+/* title sits flush, no background */
+.title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+  display: flex;
+  gap: 4px;
+}
+
+/* India flag colors */
+.saffron { color: #FF9933; }
+.white {
+  color: #FFFFFF;
+  /* subtle outline so it shows over light map areas */
+  text-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+.green  { color: #138808; }
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .header { top: 12px; gap: 6px; }
+  .logo   { width: 28px; height: 28px; }
+  .title  { font-size: 1.4rem; }
+}
